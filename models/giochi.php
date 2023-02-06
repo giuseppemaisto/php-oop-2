@@ -1,19 +1,17 @@
 <?php
 
-class giochi extends Prodotti{
+class giochi extends prodotti{
     public $dimensioni; 
     public $caratteristiche;
 
     public function __construct($immagine, $nome, $tipo, $prezzo, $caratteristiche,$dimensioni){
-        parent::__construct($immagine, $nome, $tipo, $prezzo, $caratteristiche, $dimensioni);
+        parent::__construct($immagine, $nome, $tipo, $prezzo,);
         
         $this->dimensioni = $dimensioni;
         $this->caratteristiche = $caratteristiche;
     }
 
-    public function getProduct(){
-        return parent ::getProduct()."<p><strong>Descrizione: </strong>".$this->caratteristiche."<br>"."<strong>Dimensione: </strong>".$this->dimensione."</p>";
-     }
+
 }
 
 

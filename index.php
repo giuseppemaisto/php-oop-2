@@ -13,32 +13,42 @@ include __DIR__.'/database.php'
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col-12 m-5">
-                <?php foreach($prodotti as $item) { ?>
-                    <div class="card">
-                        <img src="<?php echo $item->$immagine;
-                        ?>" class="card-img-top">
+      <h1>i nosttri prodotti</h1>
+      <div class="row">
 
-                        <div class="card-body">
-                            <h4 class="title"><?php echo $item->name?></h4>
-
-                            <p><?php echo "categoria: ".$item->categoria."<br>"."prezzo: ".$item->prezzo;?></p>
-
-                            <p class="card-text"><?php if($item->caratteristiche){
-                                echo $item->caratteristiche;
-                            }
-                            else{
-                                echo $item->peso;
-                            };
-                            ?>
-                                </p>
-                        </div>
-                    </div>
-                <?php }?>
-                
-            </div>
+      <?php foreach ($arrayCibo as $item) {?>
+        <div class="card col-3 m-5 object-fit">
+            <img src="<?php echo $item->immagine;?>" alt="">
+            <h2><?php echo $item->nome?></h2>
+            <p><?php echo $item->tipo?></p>
+            <p><?php echo $item->prezzo?></p>
+            <p><?php echo $item->peso?></p>
+            <p><?php echo $item->ingredienti?></p>
         </div>
+        <?php } ?>
+
+        <?php foreach ($arrayAccessori as $item) {?>
+        <div class="card col-3 m-5 object-fit">
+            <img src="<?php echo $item->immagine;?>" alt="">
+            <h2><?php echo $item->nome?></h2>
+            <p><?php echo $item->tipo?></p>
+            <p><?php echo $item->prezzo?></p>
+            <p><?php echo $item->dimensioni?></p>
+            <p><?php echo $item->materiale?></p>
+        </div>
+        <?php } ?>
+
+        <?php foreach ($arrayGiochi as $item) {?>
+        <div class="card col-3 m-5 object-fit">
+            <img src="<?php echo $item->immagine;?>" alt="">
+            <h2><?php echo $item->nome?></h2>
+            <p><?php echo $item->tipo?></p>
+            <p><?php echo $item->prezzo?></p>
+            <p><?php echo $item->dimensioni?></p>
+            <p><?php echo $item->caratteristiche?></p>
+        </div>
+        <?php } ?>
+      </div>
     </div>
 </body>
 </html>
