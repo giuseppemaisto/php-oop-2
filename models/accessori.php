@@ -4,18 +4,10 @@ class accessori extends prodotti{
     public $dimensioni;
     public $materiale;
 }
-
-public function setDimensioni($dimensioni){
-    $this->dimensioni = $dimensioni
-}
-public function getDimensioni(){
-    return $this->dimensioni;
-}
-
-public function setmateriale($materiale){
-    $this ->caratteristiche = $caratteristiche
-}
-public function getmateriale(){
-    return $this->caratteristiche;
+public function __construct($immagine, $nome, $tipo, $prezzo,$dimensioni, $materiale){
+    parent::__construct($immagine, $nome, $tipo, $prezzo);
+   
+    $this->dimensioni = $dimensioni;
+    $this->materiale = $materiale;
 }
 ?>

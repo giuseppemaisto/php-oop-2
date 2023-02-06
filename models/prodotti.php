@@ -13,5 +13,9 @@ class prodotti{
     $this->nome = $nome;
     $this->tipo = $tipo;
     $this->prezzo = $prezzo;
-}}
+}
+public function getProduct(){
+    return "<h2>".$this->name."</h2>"."<h3>".$this->tipo."</h3>"."<strong>Prezzo: </strong>".$this->prezzo;
+}
+}
 ?>
