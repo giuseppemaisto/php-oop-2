@@ -1,8 +1,8 @@
 <?php
 
-class accessori extends prodotti{
-    public $dimensioni;
-    public $materiale;
+class giochi extends Prodotti{
+    public $dimensioni; 
+    public $caratteristiche;
 }
 
 public function setDimensioni($dimensioni){
@@ -12,10 +12,10 @@ public function getDimensioni(){
     return $this->dimensioni;
 }
 
-public function setmateriale($materiale){
+public function setCaratteristiche($caratteristiche){
     $this ->caratteristiche = $caratteristiche
 }
-public function getmateriale(){
+public function getCaratteristiche(){
     return $this->caratteristiche;
 }
 ?>
