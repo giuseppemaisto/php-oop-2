@@ -1,14 +1,14 @@
 <?php
 
 class accessori extends prodotti{
-    public $dimensioni;
-    public $materiale;
+    public $size;
+    public $material;
 
-public function __construct($immagine, $nome, $tipo, $prezzo, $dimensioni, $materiale)
+public function __construct($image, $name, categoria $category, $price, $size, $material)
 {
-    parent::__construct($immagine, $nome, $tipo, $prezzo);
+    parent::__construct($image, $name, $categoria, $price);
    
-    $this->dimensioni = $dimensioni;
-    $this->materiale = $materiale;
+    $this->size = $size;
+    $this->material = $material;
 }
 }

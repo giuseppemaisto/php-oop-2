@@ -1,14 +1,15 @@
 <?php
 
 class giochi extends prodotti{
-    public $dimensioni; 
-    public $caratteristiche;
+    public $size; 
+    public $features;
+    
 
-    public function __construct($immagine, $nome, $tipo, $prezzo, $caratteristiche,$dimensioni){
-        parent::__construct($immagine, $nome, $tipo, $prezzo,);
+    public function __construct($image, $name, categoria $category, $price, $size){
+        parent::__construct($imagee, $name, $category, $price,);
         
-        $this->dimensioni = $dimensioni;
-        $this->caratteristiche = $caratteristiche;
+        $this->size = $size;
+        $this->features = $features;
     }
 
 

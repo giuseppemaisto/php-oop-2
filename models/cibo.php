@@ -1,14 +1,14 @@
 <?php
 
 class Cibo extends prodotti{
-    public $peso;
-    public $ingredienti;
+    public $weight;
+    public $ingredients;
 
-    public function __construct($nome,$prezzo, $tipo,$immagine , $ingredienti,$peso){
-        parent::__construct( $nome, $tipo, $prezzo,$immagine,);
+    public function __construct($name,$price, categoria  $category,$image , $ingredients,$weight){
+        parent::__construct( $name, $category, $price,);
      
-        $this->peso = $peso;
-        $this->ingredienti = $ingredienti;
+        $this->weight = $weight;
+        $this->ingredients = $ingredients;
     }
 
   
