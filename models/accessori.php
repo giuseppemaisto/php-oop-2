@@ -6,7 +6,7 @@ class accessori extends prodotti{
 
 public function __construct($image, $name, categoria $category, $price, $size, $material)
 {
-    parent::__construct($image, $name, $categoria, $price);
+    parent::__construct($image, $name, $category, $price);
    
     $this->size = $size;
     $this->material = $material;

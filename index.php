@@ -12,43 +12,45 @@ include __DIR__.'/database.php'
     <title>PHP-OOP-2</title>
 </head>
 <body>
-    <div class="container">
-      <h1>i nosttri prodotti</h1>
-      <div class="row">
+   <div class="container">
+    <div class="row">
+        <?php foreach($products as $product) { ?>
+            <div class="col-sm-4">
+                <div class="card">
+                    <img src="<?php echo $product->image; ?>" class="img-fluid" >
+                    <h4><?php echo $product->name?></h4>
+                    <p>
+                        prezzo: <?php echo $product->price; ?>
+                    </p>
 
-      <?php foreach ($arrayCibo as $item) {?>
-        <div class="card col-3 m-5 object-fit">
-            <img src="<?php echo $item->immagine;?>" alt="">
-            <h2><?php echo $item->nome?></h2>
-            <p><?php echo $item->tipo?></p>
-            <p><?php echo $item->prezzo?></p>
-            <p><?php echo $item->peso?></p>
-            <p><?php echo $item->ingredienti?></p>
-        </div>
-        <?php } ?>
+                    <p>
+                        <?php if(isset($product->weight)){
+                            echo $product->weight;
+                        }
 
-        <?php foreach ($arrayAccessori as $item) {?>
-        <div class="card col-3 m-5 object-fit">
-            <img src="<?php echo $item->immagine;?>" alt="">
-            <h2><?php echo $item->nome?></h2>
-            <p><?php echo $item->tipo?></p>
-            <p><?php echo $item->prezzo?></p>
-            <p><?php echo $item->dimensioni?></p>
-            <p><?php echo $item->materiale?></p>
-        </div>
-        <?php } ?>
+                        if(isset($product->ingredients)){
+                            foreach($product-> ingredients as $ingredient){
+                                $string.=$ingredient. " ";
+                            };
+                        }
+                        if(isset($product->material)){
+                            echo $product->material;
+                        }
+                        if(isset($product->size)){
+                            echo $product->size;
+                        }
+                        if(isset($product->features)){
+                            echo $product->features;
+                        }
+                         ?>   
+                        
+                    </p>
+                </div>
 
-        <?php foreach ($arrayGiochi as $item) {?>
-        <div class="card col-3 m-5 object-fit">
-            <img src="<?php echo $item->immagine;?>" alt="">
-            <h2><?php echo $item->nome?></h2>
-            <p><?php echo $item->tipo?></p>
-            <p><?php echo $item->prezzo?></p>
-            <p><?php echo $item->dimensioni?></p>
-            <p><?php echo $item->caratteristiche?></p>
-        </div>
+            </div>
         <?php } ?>
-      </div>
     </div>
+   </div>
+     
 </body>
 </html>

@@ -6,7 +6,7 @@ class giochi extends prodotti{
     
 
     public function __construct($image, $name, categoria $category, $price, $size){
-        parent::__construct($imagee, $name, $category, $price,);
+        parent::__construct($image, $name, $category, $price,);
         
         $this->size = $size;
         $this->features = $features;
